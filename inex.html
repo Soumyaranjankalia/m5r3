@@ -52,7 +52,6 @@
 document.querySelector("#form").addEventListener("submit", addItem);
 document.querySelector(".tr")
 let data = []
-//   var prod = JSON.parse(localStorage.getItem("shoppingItems")) || [];
 const writeServer = (action, data) => ({
   method: action,
   body: JSON.stringify(data),
@@ -90,8 +89,6 @@ const processJSON = json => {
       population: population,
     };
 
-    
-    // localStorage.setItem("shoppingItems", JSON.stringify(prod));
     const url = 'https://soumya-server.herokuapp.com/data';
 
     
@@ -123,7 +120,6 @@ async function  get_data(){
 
 function append_data(data){
 console.log(data)
-// document.querySelector("#addData").textContent = " ";
 
 data.forEach(function (el){
 let tablerow = document.createElement("tr");
@@ -156,12 +152,6 @@ tabledata.append(tablerow);
 
 get_data()
 
-// var url = "http://localhost:3000/data";
-
-// var ans = apiCall(url)
-
-// cosnole.log(ans)
-// console.log(url)
 
 
 
